@@ -11,9 +11,19 @@ export default function Home() {
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
+        <Header title="Sabaila Doministiku" />
+        <img src="/dominante.jpeg" alt="Dominante" />
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          La sabaila doministuku es super dominante. Ojalá entender euskera para hacer esta página mejor.
+        </p>
+        <p>
+          sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku 
+          sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku 
+          sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku 
+          sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku 
+          sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku 
+          sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku 
+          sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku sabaila doministuku 
         </p>
       </main>
 
