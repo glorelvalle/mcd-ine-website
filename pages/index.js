@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Next.js Starter!</title>
+        <title>El origen del Sabaila-Doministiku</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
