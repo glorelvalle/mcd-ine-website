@@ -1,6 +1,19 @@
 [build]
-  command = "npm run build"
-  publish = ".next"
+  publish = "_site"
+  command = "curl -sSOL https://cecil.app/build.sh && bash ./build.sh"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+[build.environment]
+  PHP_VERSION = "7.4"
+
+[context.production.environment]
+  CECIL_ENV = "production"
+
+[context.deploy-preview.environment]
+  CECIL_ENV = "preview"
+
+[template.environment]
+  CECIL_TITLE = "Blog's title"
+  CECIL_BASELINE = "Short description (~ 20 characters)"
+  CECIL_DESCRIPTION = "Full description (~ 250 characters)"
+  CECIL_AUTHOR = "Your name"
+  CECIL_THEME = "Theme (use 'hyde' or 'garth')"

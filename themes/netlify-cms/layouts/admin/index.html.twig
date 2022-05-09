@@ -1,0 +1,48 @@
+<!-- Netlify CMS -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title|default('Content Manager') }}</title>
+    <link rel="stylesheet" href="https://unpkg.com/netlify-cms@{{ site.netlify.cms.version|default('latest') }}/dist/cms.css" />
+  </head>
+  <body>
+    <script src="https://unpkg.com/netlify-cms@{{ site.netlify.cms.version|default('latest') }}/dist/netlify-cms.js"></script>
+    <script src="https://identity-js.netlify.com/{{ site.netlify.identity.version|default('v1') }}/netlify-identity-widget.js"></script>
+    <script>
+      // Identity
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', user => {
+          if (!user) {
+            window.netlifyIdentity.on('login', () => {
+              document.location.href = '/admin/';
+            });
+          }
+        });
+        window.netlifyIdentity.on('logout', () => {
+          document.location.href = '/';
+        });
+      }
+      // Preview: Style
+      //CMS.registerPreviewStyle('/styles.css');
+      // Preview: Templates
+      // Podcast Episode
+      var Episode = createClass({
+        render: function() {
+          var entry = this.props.entry;
+          var audio = this.props.getAsset(entry.getIn(['data', 'episode', 'file']));
+          return h('div', {},
+            h('h1', {}, entry.getIn(['data', 'title'])),
+            h('div', {}, entry.getIn(['data', 'date'])),
+            h('div', {},
+              h('audio', {controls: "controls", "src": audio.toString()}),
+            ),
+            h('div', {"className": "text"}, this.props.widgetFor('body'))
+          );
+        }
+      });
+      CMS.registerPreviewTemplate('episodes', Episode);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ site.language }}" lang="{{ site.language }}">
+  <head>
+    {%- block head ~%}
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    {%~ include 'partials/metatags.html.twig' ~%}
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('apple-touch-icon-144-precomposed.png')|url }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+      {%- block head_css ~%}
+    <link rel="stylesheet" href="{{ asset(['css/poole.css','css/syntax.css','css/hyde.css'])|minify|url }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+      {%- endblock head_css ~%}
+    <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/monokai-sublime.min.css', {minify: false})|url }}">
+    <script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js', {minify: false})|url }}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    {%- endblock head ~%}
+  </head>
+  {%- set themes = {
+    'red':     'theme-base-08',
+    'orange':  'theme-base-09',
+    'yellow':  'theme-base-0a',
+    'green':   'theme-base-0b',
+    'cyan':    'theme-base-0c',
+    'blue':    'theme-base-0d',
+    'magenta': 'theme-base-0e',
+    'brown':   'theme-base-0f',
+    'cecil':   'theme-cecil'
+  } -%}
+  {%- set class = [] -%}
+  {%- if site.hyde.theme -%}
+    {%- set class = class|merge([themes[site.hyde.theme]]) -%}
+  {%- endif -%}
+  {%- if site.hyde.reverse -%}
+    {%- set class = class|merge(['layout-reverse']) -%}
+  {%- endif -%}
+  {%- set class = class|join(' ') ~%}
+  <body class="{{ class }}">
+    <div class="sidebar">
+      <div class="container{% if site.hyde.sidebar.sticky %} sidebar-sticky{% endif %}">
+        {%- block sidebar ~%}
+        <div class="sidebar-about">
+          <h1>
+            <a href="{{ url(site.home) }}">{{ site.title }}</a>
+          </h1>
+          <p class="lead">{{ site.description }}</p>
+        </div>
+        <nav class="sidebar-nav">
+          {%- if site.menus.main is defined ~%}
+            {%- for menu in site.menus.main|sort_by_weight ~%}
+          <a class="sidebar-nav-item{% if url(page) == url(menu.url) %} active{% endif %} item-weight-{{ menu.weight }}" href="{{ url(menu.url) }}">{{ menu.name }}</a>
+            {%- endfor ~%}
+          {%- endif ~%}
+        </nav>
+        <p>Powered by <a href="{{ cecil.url }}">Cecil</a> &amp; <a href="https://github.com/poole/hyde#readme">Hyde</a>.</p>
+        {%- endblock sidebar ~%}
+      </div>
+    </div>
+    <div class="content container">
+      {%~ block content ~%}
+      <h1 class="page-title">{{ page.title }}</h1>
+      {{ page.content }}
+      {%- endblock ~%}
+    </div>
+  </body>
+</html>

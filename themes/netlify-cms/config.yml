@@ -1,0 +1,18 @@
+defaultpages:
+  admin:
+    path: admin
+    title: "Content Manager (Netlify CMS)"
+    layout: admin/index
+    output: html
+netlify:
+  cms:
+    path: "admin"
+    version: "latest"
+  identity:
+    version: "v1"
+serviceworker:
+  ignore:
+    - name: 'cms'
+      path: '/admin'
+    - name: 'netlify'
+      path: '/.netlify'

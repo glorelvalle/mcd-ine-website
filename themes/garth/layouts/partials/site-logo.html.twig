@@ -1,0 +1,4 @@
+{% set logo = asset(site.logo) %}
+        <a class="logo" href="{{ url(site.home) }}">
+          <img src="{{ logo|url }}" width="{{ logo.width }}" height="{{ logo.height }}" alt="{{ site.title }} logo"/>
+        </a>

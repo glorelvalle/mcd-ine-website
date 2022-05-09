@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>/tags/fauna/</id>
+  <title>INE - Fauna</title>
+  <subtitle><![CDATA[A ready to use static blog, powered by Cecil.]]></subtitle>
+  <link href="/tags/fauna/atom.xml" rel="self" type="application/atom+xml" />
+  <link href="/tags/fauna/" rel="alternate" type="text/html" />
+  <updated>2020-02-05T15:43:00+01:00</updated>
+  <author>
+    <name>INE</name>
+    <uri>/</uri>
+  </author>
+  <entry xml:lang="en">
+    <id>/blog/hienas/</id>
+    <title>Hiena</title>
+    <content type="html">
+      <![CDATA[<p><strong>Sabaila doministiku</strong> da l-ren adierazpide nagusia. Espezie nagusienen barruan <a href="https://eu.wikipedia.org/wiki/Lehoinabar">lehoinabarra dago</a>. Lehoinabarra lehoi, tigre eta jaguarrekin lotutako felino dotore eta indartsua da. Saharaz hegoaldeko <a href="https://es.wikipedia.org/wiki/África">Afrikan</a>, Ipar Afrikan, Erdialdeko Asian, Indian eta Txinan bizi da. Hala ere, leku batzuetan mehatxatuta daude, batez ere Afrikatik kanpoko eskualdeetan. Lehoinabarra hain da erosoa zuhaitzetan, non askotan bere harrapakinak adarretara eramaten ditu. Horrela, harrapatzaileen eskuetatik kanpo mantentzen ditu, hienak adibidez. Zuhaitzen adarretatik ere ehizatzen du, non bere koloreari esker hostoen artean ezin hobeto kamuflatzen den bere biktimaren gainetik salto egin arte. Gaueko harrapari hauek antilopeei, oreinei eta txerriak ere erasotzen dizkiete belar altuan zehar makurtuta. Giza asentamenduak daudenean, txakurrak eta tarteka pertsonak ere ehizatzen dituzte. Lehoinabarrak igerilari onak dira eta ingurune honetan ere oso eroso daude, batzuetan arrainak edo karramarroak ehizatzen dituzten. Emeek urteko edozein unetan izan ditzakete kumeak. Normalean, kolore grisaxka izan ohi dira, apenas ikusten diren orbanekin. Amak kumeak ezkutatu eta leku seguru batetik bestera garraiatzen ditu jolasteko eta ehizatzen ikasteko adina izan arte. Kumeak amarekin bizi dira urtebete inguru, bizitza osoan bakardadean jokatzen dute. Lehoinabar gehienak horiak dira orban ilunekin. Pantera beltzak deitzen dira sarritan, orbanak apenas ikusten direlako, kolore uniformeko larrua duten lehoinabar beltzak. </p>
+<blockquote>
+<p>Source: <a href="https://www.nationalgeographic.com.es/animales/hienas">https://www.nationalgeographic.com.es/animales/hienas</a></p>
+</blockquote>]]>
+    </content>
+    <link href="/blog/hienas/" rel="alternate" type="text/html" />
+    <published>2020-02-05T15:43:00+01:00</published>
+    <updated>2020-02-05T15:43:00+01:00</updated>
+  </entry>
+</feed>

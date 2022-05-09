@@ -1,0 +1,14 @@
+{% if site.menus.footer is defined %}
+{% set menu %}{% apply spaceless %}
+{% for item in site.menus.footer|sort_by_weight %}
+&nbsp;·&nbsp;<a href="{{ url(item.url) }}">{{ item.name }}</a>
+{% endfor %}
+{% endapply %}{% endset %}
+{% endif %}
+    <footer class="footer">
+      <div class="container">
+        <div class="copyright typeset">
+          <small class="small">&copy; {{ site.copyright|default(site.title) }} {{ site.time|date('Y') }}&nbsp;·&nbsp;Made with <a href="{{ cecil.url }}">Cecil</a> &amp; <a href="https://github.com/Cecilapp/theme-garth#readme">Garth</a>{% if menu is defined %}{{ menu }}{% endif %}</small>
+        </div>
+      </div>
+    </footer>
