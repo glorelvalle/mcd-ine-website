@@ -7,6 +7,8 @@ menu:
 ---
 > A ready to use static blog, powered by [Cecil](https://cecil.app).
 
+José Antonio Álvarez & Gloria del Valle Cano
+
 ## How to use?
 
 ### Managing content with [Forestry](https://forestry.io)
