@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>/tags/fauna/</id>
-  <title>INE - Fauna</title>
+  <title>Sabaila doministiku - Fauna</title>
   <subtitle><![CDATA[A ready to use static blog, powered by Cecil.]]></subtitle>
   <link href="/tags/fauna/atom.xml" rel="self" type="application/atom+xml" />
   <link href="/tags/fauna/" rel="alternate" type="text/html" />
   <updated>2020-02-05T15:43:00+01:00</updated>
   <author>
-    <name>INE</name>
+    <name>Sabaila doministiku</name>
     <uri>/</uri>
   </author>
   <entry xml:lang="en">
